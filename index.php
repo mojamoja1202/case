@@ -1,38 +1,40 @@
 <?php
-
+/*
+個案資料頁面：
+1.
+2.
+3.
+4.
+5.
+6.
+*/
 //-----引入區-----
 include "../../mainfile.php";
 include "../../header.php";
+//include_once XOOPS_ROOT_PATH . "/modules/tadtools/tad_function.php";
 //-----函數區-----
-function showCase(){
-	$main="這是個案管理系統，功能如下：<br>";
-	$main.="1.案號是依據個案類型、性別及班級劃分<br>";
-	$main.="2.可以將期間的資料整理匯出";
 
+//顯示個案資料頁面
+function show(){
+	$main="這是個案資料頁面<br><br>";
 	return $main;
 }
+
+
+//
 
 //-----判斷區-----
 $op=(empty($_REQUEST['op']))?"":$_REQUEST['op'];
 $sn=(empty($_REQUEST['sn']))?"":$_REQUEST['sn'];
-
-switch($op){
-	case "addCase":
-
-	break;
-	case "":
-	printContent($place);
-	break;
-	case "save":
-	save($place,$test1,$test2,$test3,$absense);
-	redirect_header("index.php?op=print&place=$place", 3 ,"輸入完成");
-	break;
+switch ($op) {
+	case 'save':
+		save();
+		redirect_header("index.php",3,"領取成功");
+		break;
+	
 	default:
-	$main=showCase();
+		$main=show();
 }
-
-
-
 //-----顯示區-----
 echo $main;
 include "../../footer.php";
