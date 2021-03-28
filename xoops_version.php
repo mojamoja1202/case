@@ -22,9 +22,9 @@ $modversion['tables'][1] = "case_info";
 //訪談紀錄
 $modversion['tables'][2] = "case_meeting";
 //班級輔導
-$modversion['tables'][2] = "case_class";
+$modversion['tables'][3] = "case_class";
 //家長輔導
-$modversion['tables'][2] = "case_family";
+$modversion['tables'][4] = "case_family";
 
 
 

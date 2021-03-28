@@ -55,3 +55,16 @@ CREATE TABLE `case_family` (
   `min` smallint(2) UNSIGNED NOT NULL COMMENT '訪談分',
   PRIMARY KEY (`sn`)
 ) ENGINE=MyISAM;
+
+CREATE TABLE `case_outpeople` (
+  `sn` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '索引',
+  `id` varchar(255) NOT NULL COMMENT '個案編號',
+  `school` varchar(255) NOT NULL COMMENT '家長輔導目標',
+  `note` varchar(1000) NOT NULL COMMENT '備註',
+  `year` smallint(2) UNSIGNED NOT NULL COMMENT '訪談年',
+  `month` smallint(2) UNSIGNED NOT NULL COMMENT '訪談月',
+  `day` smallint(2) UNSIGNED NOT NULL COMMENT '訪談日',
+  `hour` smallint(2) UNSIGNED NOT NULL COMMENT '訪談時',
+  `min` smallint(2) UNSIGNED NOT NULL COMMENT '訪談分',
+  PRIMARY KEY (`sn`)
+) ENGINE=MyISAM;
